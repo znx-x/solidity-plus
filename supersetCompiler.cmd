@@ -1,4 +1,4 @@
-:: Subset of Functions
+:: Superset of Functions
 :: ~ Reads and recompiles the Solidity+ syntax and semantics to Solidity.
 set "line=!line: set license = // SPDX-License-Identifier: !"
 set "line=!line: set compiler = pragma solidity ^!"
