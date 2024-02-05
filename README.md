@@ -8,4 +8,4 @@ This is literally a "when I feel like" type of side project, so gauge your expec
 
 Non-functional at the moment, but as soon as I feel that I've got to the point where it can be used - even if on a very basic form - I will build and release the compiler.
 
-Documentation and more information will be added as the project develops, and if you need any further info just come and talk to me directly on Discord.
+Documentation and more information will be added as the project develops, and if you need any further info just come and talk to me directly.
