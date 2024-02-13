@@ -16,7 +16,7 @@ After tinkering with a few different languages, I have settled on Python for the
 
 ### Compile Your Code
 
-## Requirements
+#### Requirements
 - Pyhthon installed
 - Git (if you are cloning it)
 
