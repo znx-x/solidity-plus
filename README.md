@@ -28,7 +28,7 @@ Call the compiler script using `.\compile` and specify the `.xsol` file path - i
 .\compile example.xsol
 ```
 
-After compiling your Solidity+ file, the output file should be `original-file-name_compiler.sol` and it is ready to be deployed using Remix, Hardhat or any other Solidity compiler.
+After compiling your Solidity+ file, the output file should be `original-file-name_compiled.sol` and it is ready to be deployed using Remix, Hardhat or any other Solidity compiler.
 
 ### Future UI for Compiling and Deploying
 
