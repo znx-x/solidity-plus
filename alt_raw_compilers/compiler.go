@@ -15,15 +15,9 @@ func clearConsole() {
 }
 
 func processLine(line string) string {
-	if strings.Contains(line, "set license =") {
-		return "// SPDX-License-Identifier: "
-	} else if strings.Contains(line, "set compiler =") {
-		return "pragma solidity ^"
-	} else if strings.Contains(line, "call =") {
-		return "import "
-	} else if strings.Contains(line, "use interface erc20 =") {
-		return "import @openzeppelin/contracts/token/ERC20/IERC20.sol; "
-	}
+	if strings.Contains(line, "original_input") {
+		return "solidity_output"
+	} // else if (...)
 	return line
 }
 

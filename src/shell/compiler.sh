@@ -28,7 +28,7 @@ fi
 
 # Compiler
 while IFS= read -r line || [[ -n "$line" ]]; do
-    line=$(source ./supersetCompiler.sh "$line")
+    line=$(source ./superset_compiler.sh "$line")
 
     # ~ Check and remove leading and trailing spaces.
     line=$(echo "$line" | xargs)

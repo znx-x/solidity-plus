@@ -11,15 +11,10 @@ fn clear_console() {
 }
 
 fn process_line(line: &str) -> String {
-    if line.contains("set license =") {
-        "// SPDX-License-Identifier: ".to_string()
-    } else if line.contains("set compiler =") {
-        "pragma solidity ^".to_string()
-    } else if line.contains("call =") {
-        "import ".to_string()
-    } else if line.contains("use interface erc20 =") {
-        "import @openzeppelin/contracts/token/ERC20/IERC20.sol; ".to_string()
-    } else {
+    if line.contains("original_input") {
+        "solidity_output".to_string()
+    } // else if (...)
+    else {
         line.to_string()
     }
 }

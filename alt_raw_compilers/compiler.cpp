@@ -17,15 +17,9 @@ void clearConsole() {
 }
 
 std::string processLine(const std::string& line) {
-    if (line.find("set license =") != std::string::npos) {
-        return "// SPDX-License-Identifier: ";
-    } else if (line.find("set compiler =") != std::string::npos) {
-        return "pragma solidity ^";
-    } else if (line.find("call =") != std::string::npos) {
-        return "import ";
-    } else if (line.find("use interface erc20 =") != std::string::npos) {
-        return "import @openzeppelin/contracts/token/ERC20/IERC20.sol; ";
-    }
+    if (line.find("original_input") != std::string::npos) {
+        return "solidity_output";
+    } // else if (...)
     return line;
 }
 

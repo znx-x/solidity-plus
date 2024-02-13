@@ -9,15 +9,9 @@ void clearConsole() {
 
 void processLine(char* line) {
     // Replace Solidity+ syntax with Solidity syntax
-    if (strstr(line, "set license =")) {
-        strcpy(line, "// SPDX-License-Identifier: ");
-    } else if (strstr(line, "set compiler =")) {
-        strcpy(line, "pragma solidity ^");
-    } else if (strstr(line, "call =")) {
-        strcpy(line, "import ");
-    } else if (strstr(line, "use interface erc20 =")) {
-        strcpy(line, "import @openzeppelin/contracts/token/ERC20/IERC20.sol; ");
-    }
+    if (strstr(line, "original_input")) {
+        strcpy(line, "solidity_output");
+    } //else if (...)
 }
 
 int main(int argc, char *argv[]) {

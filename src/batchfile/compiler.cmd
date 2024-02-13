@@ -27,7 +27,7 @@ if exist "%outputFile%" del "%outputFile%"
 :: Compiler
 for /f "tokens=*" %%i in (%~1) do (
     set "line= %%i "
-    call .\supersetCompiler
+    call .\superset_compiler
 
     :: ~ Check and remove leading and trailing spaces.
     for /f "tokens=* delims= " %%x in ("!line!") do set "line=%%x"
