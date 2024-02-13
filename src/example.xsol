@@ -1,0 +1,55 @@
+set license MIT
+set compiler 0.8.21;
+
+use ETH IERC20
+
+contract MyToken {
+    number totalSupply = 1000000;
+    mapping(account => number) balances;
+    mapping(account => mapping(account => number)) allowed;
+
+    event Transfer(account indexed from, account indexed to, number value);
+    event Approval(account indexed owner, account indexed spender, number value);
+
+    constructor() {
+        balances[msg.sender] = totalSupply;
+        trigger Transfer(address(0), msg.sender, totalSupply);
+    }
+
+    function balanceOf(account _owner) visible constant returns (number) {
+        return balances[_owner];
+    }
+
+    function transfer(account _to, number _value) visible returns (bool success) {
+        if (balances[msg.sender] >= _value && _value > 0) {
+            balances[msg.sender] -= _value;
+            balances[_to] += _value;
+            trigger Transfer(msg.sender, _to, _value);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function transferFrom(account _from, account _to, number _value) visible returns (bool success) {
+        if (balances[_from] >= _value && allowed[_from][msg.sender] >= _value && _value > 0) {
+            balances[_to] += _value;
+            balances[_from] -= _value;
+            allowed[_from][msg.sender] -= _value;
+            trigger Transfer(_from, _to, _value);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function approve(account _spender, number _value) visible returns (bool success) {
+        allowed[msg.sender][_spender] = _value;
+        trigger Approval(msg.sender, _spender, _value);
+        return true;
+    }
+
+    function allowance(account _owner, account _spender) visible constant returns (number remaining) {
+        return allowed[_owner][_spender];
+    }
+}

@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "*.xsol": "solidity"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
