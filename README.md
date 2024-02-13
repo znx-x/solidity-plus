@@ -16,6 +16,10 @@ After tinkering with a few different languages, I have settled on Python for the
 
 ### Compile Your Code
 
+## Requirements
+- Pyhthon installed
+- Git (if you are cloning it)
+
 To compile your `.xsol` file you can just call the compiler using the appropriate script (for either Windows, Linux, or MacOS) declaring the file you want to compile, inside the `src` folder. For a test run, you can compile the the provided `example.xsol` file using the command below:
 
 First clone and navigate to the `src` folder.
