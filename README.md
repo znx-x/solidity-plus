@@ -40,6 +40,8 @@ Once the development of the superset is complete (at least in its first usable i
 
 ## Get Involved
 
+**CONTRIBUTORS WANTED!**
+
 As Solidity+ evolves, documentation and additional resources will become available, offering guidance and support for those interested in exploring the capabilities of this superset language.
 
 Your feedback, suggestions, and contributions are welcome.
